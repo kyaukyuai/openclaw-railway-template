@@ -19,6 +19,10 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
   && apt-get install -y gh \
   && rm -rf /var/lib/apt/lists/*
 
+# Install gog CLI (Google Workspace CLI)
+RUN curl -fsSL https://github.com/steipete/gogcli/releases/latest/download/gogcli_0.9.0_linux_amd64.tar.gz | tar xz -C /usr/local/bin gog \
+  && chmod +x /usr/local/bin/gog
+
 RUN npm install -g openclaw@latest
 
 WORKDIR /app

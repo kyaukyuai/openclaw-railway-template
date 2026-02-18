@@ -26,6 +26,9 @@ RUN curl -fsSL https://github.com/steipete/gogcli/releases/download/v${GOG_VERSI
 
 RUN npm install -g openclaw@latest
 
+# Install qmd (semantic search CLI for markdown)
+RUN npm install -g @tobilu/qmd
+
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./

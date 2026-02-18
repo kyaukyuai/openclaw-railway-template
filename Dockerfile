@@ -39,7 +39,8 @@ COPY entrypoint.sh ./entrypoint.sh
 
 RUN useradd -m -s /bin/bash openclaw \
   && chown -R openclaw:openclaw /app \
-  && mkdir -p /data && chown openclaw:openclaw /data
+  && mkdir -p /data && chown openclaw:openclaw /data \
+  && mkdir -p /home/openclaw/.config/qmd && chown -R openclaw:openclaw /home/openclaw/.config
 
 ENV PORT=8080
 ENV OPENCLAW_ENTRY=/usr/local/lib/node_modules/openclaw/dist/entry.js

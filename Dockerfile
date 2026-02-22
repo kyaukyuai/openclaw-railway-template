@@ -1,4 +1,4 @@
-FROM node:22-bookworm
+FROM node:24-bookworm
 
 RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -20,7 +20,7 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
   && rm -rf /var/lib/apt/lists/*
 
 # Install gog CLI (Google Workspace CLI)
-ARG GOG_VERSION=0.10.0
+ARG GOG_VERSION=0.11.0
 RUN curl -fsSL https://github.com/steipete/gogcli/releases/download/v${GOG_VERSION}/gogcli_${GOG_VERSION}_linux_amd64.tar.gz | tar xz -C /usr/local/bin gog \
   && chmod +x /usr/local/bin/gog
 

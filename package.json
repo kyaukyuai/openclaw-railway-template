@@ -11,10 +11,10 @@
     "lint": "node -c src/server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "http-proxy": "^1.18.1",
-    "node-pty": "^1.0.0",
-    "ws": "^8.18.0"
+    "node-pty": "^1.1.0",
+    "ws": "^8.19.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": ["node-pty"]
